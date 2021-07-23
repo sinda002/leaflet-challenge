@@ -7,16 +7,16 @@ var myMap = L.map("map", {
 
 // Adding a tile layer (the background map image) to our map
 
-L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+L.tileLayer("https://api.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
   attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
   maxZoom: 18,
-  id: "mapbox.streets",
-  accessToken: "pk.eyJ1IjoiZGFuMTM5MSIsImEiOiJja3JjanQ3c2IzemtqMnByeGpvbnN4bGpqIn0.O2u1j6KFm3jSGutf0nEyGg"
+  id: "mapbox.mapbox-streets-v8",
+  accessToken: API_KEY
 }).addTo(myMap);
 
 // Store our API endpoint
-// var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php";
-var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php";
+// var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_hour.geojson";
+var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_hour.geojson";
 
 //  GET color radius call to the query URL
 d3.json(queryUrl, function(data) {
