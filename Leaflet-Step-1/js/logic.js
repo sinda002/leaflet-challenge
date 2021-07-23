@@ -15,8 +15,8 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }).addTo(myMap);
 
 // Store our API endpoint
-// var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
-var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson";
+// var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php";
+var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php";
 
 //  GET color radius call to the query URL
 d3.json(queryUrl, function(data) {
